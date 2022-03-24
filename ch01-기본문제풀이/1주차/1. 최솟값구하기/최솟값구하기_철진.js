@@ -28,5 +28,5 @@
     console.log(min);
   };
 
-  getMinNumber("33 12 7");
+  getMinNumber("33 12 7"); // 7
 }
