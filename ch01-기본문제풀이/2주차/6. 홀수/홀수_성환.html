@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      // 풀이 1
+      // function solution(arr) {
+      //   let answer;
+      //   let sumNum = 0;
+      //   let minNum;
+      //   for (const element of arr) {
+      //     if (element % 2 === 1) {
+      //       sumNum += element;
+
+      //       if (typeof minNum === "undefined" || minNum > element) {
+      //         minNum = element;
+      //       }
+      //     }
+      //   }
+      //   answer = `${sumNum}\n${minNum}`;
+      //   return answer;
+      // }
+
+      // 풀이 2
+      function solution(arr) {
+        let answer;
+        let sumNum = 0;
+        let oddNumArr = [];
+
+        for (const oddNum of arr) {
+          if (oddNum % 2 === 1) {
+            sumNum += oddNum;
+            oddNumArr = [...oddNumArr, oddNum];
+          }
+        }
+
+        answer = `${sumNum}\n${Math.min(...oddNumArr)}`;
+        return answer;
+      }
+
+      array = [12, 77, 38, 41, 53, 92, 85];
+      console.log(solution(array));
+    </script>
+  </body>
+</html>
