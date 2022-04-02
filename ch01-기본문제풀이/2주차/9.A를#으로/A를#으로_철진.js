@@ -19,3 +19,11 @@
       .join("");
   };
 }
+
+// 문자열 바꿀 때는 replaceAll이 존재함
+
+{
+  const solution2 = (string) => {
+    return string.replaceAll("A", "#");
+  };
+}
