@@ -8,4 +8,24 @@
 // 20 7 23 19 10 8 13
 
 {
+  const solution = (dwarfs) => {
+    const totalHeights = dwarfs.reduce((a, b) => a + b);
+    const fakeHeights = totalHeights - 100;
+    // 빙빙 돌면서 두개 합이 40이 나오는 경우를 찾으면 되지 않을까?
+    for (let i = 0; i < dwarfs.length; i++) {
+      for (let j = i + 1; j < dwarfs.length; j++) {
+        if (dwarfs[i] + dwarfs[j] === fakeHeights) {
+          return dwarfs.filter((dwarf) => dwarf !== dwarfs[i] && dwarf !== dwarfs[j]);
+        }
+      }
+    }
+    // 보다 근사한 철진님의 솔루션..
+    // dwarfs.filter(
+    //   (dwarf) =>
+    //     dwarf === fakeDwarfs - dwarf || !dwarfs.includes(fakeDwarfs - dwarf)
+    // );
+  };
+
+  const dwarfs = [20, 7, 23, 19, 10, 15, 25, 8, 13];
+  solution(dwarfs);
 }
