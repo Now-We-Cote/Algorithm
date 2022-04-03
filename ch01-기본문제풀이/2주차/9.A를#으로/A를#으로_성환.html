@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      // 풀이 #1
+      // function solution(s) {
+      //   let answer = s.replaceAll("A", "#");
+      //   return answer;
+      // }
+
+      // 풀이 #2
+      function solution(s) {
+        let answer = "";
+        let array = [];
+
+        for (let c of s) {
+          if (c === "A") {
+            array = [...array, "#"];
+          } else {
+            array = [...array, c];
+          }
+        }
+
+        answer = array.join("");
+
+        return answer;
+      }
+
+      let str = "BANANA";
+      console.log(solution(str));
+    </script>
+  </body>
+</html>
