@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(s) {
+        let answer = "";
+
+        // 풀이 1
+        // let arr = [];
+
+        // for (const c of s) {
+        //   if (arr.includes(c)) {
+        //     continue;
+        //   } else {
+        //     arr = [...arr, c];
+        //   }
+        // }
+
+        // answer = arr.join("");
+
+        // 풀이 2 (한줄로 풀기)
+        answer = [...new Set(s.split(""))].join("");
+
+        return answer;
+      }
+      console.log(solution("ksekkset"));
+    </script>
+  </body>
+</html>

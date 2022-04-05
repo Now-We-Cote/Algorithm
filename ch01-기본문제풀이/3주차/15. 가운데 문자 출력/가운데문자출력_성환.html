@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(s) {
+        let answer = "";
+        let arr = s.split("");
+        if (arr.length % 2 === 1) {
+          answer = arr[Math.floor(s.length / 2)];
+        } else {
+          answer = [arr[s.length / 2 - 1], arr[s.length / 2]].join("");
+        }
+
+        return answer;
+      }
+      console.log(solution("study"));
+      console.log(solution("good"));
+      console.log(solution("banana"));
+      console.log(solution("translation"));
+    </script>
+  </body>
+</html>
