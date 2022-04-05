@@ -1,4 +1,4 @@
-// 최솟값 구하기
+// 문자 찾기
 
 // 답안
 function solution(sentence, alp) {
