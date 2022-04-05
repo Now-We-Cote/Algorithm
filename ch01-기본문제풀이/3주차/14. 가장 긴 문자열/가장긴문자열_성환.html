@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(s) {
+        let answer = "";
+
+        // 풀이 1
+        // for (const element of s) {
+        //   if (answer.length < element.length) {
+        //     answer = element;
+        //   }
+        // }
+
+        // 풀이 2 (한줄로 풀기)
+        s.forEach((el) => {
+          if (answer.length < el.length) {
+            answer = el;
+          }
+        });
+
+        return answer;
+      }
+      let str = ["teacher", "time", "student", "beautiful", "good"];
+      console.log(solution(str));
+    </script>
+  </body>
+</html>

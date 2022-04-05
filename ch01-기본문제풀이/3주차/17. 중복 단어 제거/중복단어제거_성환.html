@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(s) {
+        let answer = [];
+
+        // 풀이 1
+        // let arr = [];
+
+        // for (const element of s) {
+        //   if (!arr.includes(element)) {
+        //     arr = [...arr, element];
+        //   }
+        // }
+        // answer = arr;
+
+        // 풀이 2
+        answer = [...new Set(s)];
+
+        return answer;
+      }
+      let str = ["good", "time", "good", "time", "student"];
+      console.log(solution(str));
+    </script>
+  </body>
+</html>

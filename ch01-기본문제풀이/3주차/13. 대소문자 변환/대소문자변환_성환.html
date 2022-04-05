@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(s) {
+        let answer = "";
+        let arr = [];
+
+        // 풀이 1
+        // for (const c of s) {
+        //   if (c === c.toUpperCase()) {
+        //     arr = [...arr, c.toLowerCase()];
+        //   } else {
+        //     arr = [...arr, c.toUpperCase()];
+        //   }
+        // }
+
+        // answer = arr.join("");
+
+        // 풀이2 (1줄로 풀기)
+        return s
+          .split("")
+          .map((c) =>
+            c === c.toUpperCase() ? c.toLowerCase() : c.toUpperCase()
+          )
+          .join("");
+
+        return answer;
+      }
+
+      console.log(solution("StuDY"));
+    </script>
+  </body>
+</html>
