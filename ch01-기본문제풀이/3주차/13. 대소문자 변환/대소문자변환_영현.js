@@ -5,7 +5,7 @@
 function solution(sentence) {
   return sentence
     .split("")
-    .map(function (a) {
+    .map((a) => {
       if (a === a.toUpperCase()) {
         return a.toLowerCase();
       } else {
@@ -22,7 +22,7 @@ solution("giVeMeSoME"); //'GIvEmEsOme'
 function solution(sentence) {
   return sentence
     .split("")
-    .map(function (a) {
+    .map((a) => {
       return a === a.toUpperCase() ? a.toLowerCase() : a.toUpperCase();
     })
     .join("");
@@ -48,5 +48,3 @@ function solution(s) {
 
 let str = "giVeMeSoME";
 solution(str); // 'GIvEmEsOme'
-
-// 그놈의 아스키코드..패스
