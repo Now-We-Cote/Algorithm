@@ -16,6 +16,6 @@
   const solution = (count, words) => {
     return words.filter(
       (word) => word.length === Math.max(...words.map((word) => word.length))
-    );
+    )[0];
   };
 }
