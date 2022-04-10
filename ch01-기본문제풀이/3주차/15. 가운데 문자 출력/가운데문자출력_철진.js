@@ -18,3 +18,13 @@
       : string.slice(string.length / 2 - 1, string.length / 2 + 1);
   };
 }
+
+// substr을 쓰면 string.length 를 한번 덜 쓸 수 있다.
+
+{
+  const solution = (string) => {
+    return string.length % 2 === 1
+      ? string.substr(string.length / 2, 1)
+      : string.substr(string.length / 2 - 1, 2);
+  };
+}
