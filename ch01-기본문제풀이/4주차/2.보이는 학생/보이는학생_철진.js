@@ -18,6 +18,8 @@
     return peoples.reduce((acc, curr) => {
       if (typeof acc !== "object" && curr > acc) {
         return [acc, curr];
+      } else if (typeof acc !== "object") {
+        return [acc];
       }
       if (curr > Math.max(...acc)) {
         return [...acc, curr];
