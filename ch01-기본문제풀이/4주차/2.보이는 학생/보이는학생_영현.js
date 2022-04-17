@@ -1,4 +1,4 @@
-// 큰 수 출력하기
+// 보이는 학생
 
 // 답안
 function solution(arr) {
