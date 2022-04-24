@@ -1,4 +1,5 @@
 {
+  // 철진님의 명풀이를 참고
   const solution = (s, t) => {
     // 문자열 s의 각 문자가 문자t와 떨어진 최소거리
     const strArr = str.split("");
