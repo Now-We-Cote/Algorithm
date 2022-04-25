@@ -28,3 +28,23 @@
     }, "");
   };
 }
+
+// 위의 풀이는 KKHSSSKKSSE 등의 대처가 불가능, 아래 풀이로 보완
+
+{
+  const solution = (string) => {
+    let combo = 1;
+
+    return string.split("").reduce((acc, curr, idx) => {
+      if (curr !== string[idx + 1]) {
+        const result = combo === 1 ? acc + curr : acc + combo;
+        combo = 1;
+        return result;
+      } else {
+        const result = combo === 1 ? acc + curr : acc;
+        combo++;
+        return result;
+      }
+    }, "");
+  };
+}
