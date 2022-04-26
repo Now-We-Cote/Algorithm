@@ -2,20 +2,20 @@
 
 // 답안
 
-const solution = (str, a) => {
-  let map = [];
-  for (i = 0; i < str.length; i++) {
-    if (str[i] === a) {
-      map.push(i);
+const solution = (str) => {
+  const arr = str.split("");
+  const newArr = [...new Set(arr)];
+  let result = [];
+  for (i = 0; i < newArr.length; i++) {
+    const comboNum = arr.filter((e) => e === newArr[i]);
+    result.push(newArr[i]);
+    if (comboNum.length !== 1) {
+      result.push(comboNum.length);
     }
   }
-  for (i = 0; i < str.length; i++) {
-    let dd = map.map((e) => Math.abs(e - i));
-    console.log(Math.min(...dd));
-  }
+  return result.join("");
 };
 
-const str = "teachermode";
-const a = "e";
+const str = "TTTEEESSSSSSSJ";
 
-solution(str, a);
+solution(str); //'T3E3S7J'

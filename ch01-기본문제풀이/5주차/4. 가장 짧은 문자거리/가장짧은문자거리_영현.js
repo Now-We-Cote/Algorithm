@@ -4,6 +4,7 @@
 
 const solution = (str, a) => {
   let map = [];
+  let result = [];
   for (i = 0; i < str.length; i++) {
     if (str[i] === a) {
       map.push(i);
@@ -11,11 +12,12 @@ const solution = (str, a) => {
   }
   for (i = 0; i < str.length; i++) {
     let dd = map.map((e) => Math.abs(e - i));
-    console.log(Math.min(...dd));
+    result.push(Math.min(...dd));
   }
+  return result.join("");
 };
 
 const str = "teachermode";
 const a = "e";
 
-solution(str, a);
+solution(str, a); //'10121012210'
