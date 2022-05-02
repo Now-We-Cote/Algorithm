@@ -44,7 +44,7 @@
           acc += priceList[j][1];
           save.push(priceList[j]);
           max = max < save.length ? save.length : max;
-          continue;
+          break;
         }
 
         acc += priceList[j][1];
