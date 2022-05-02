@@ -37,9 +37,12 @@
 
     const resultObj = flatTeams.reduce((acc, curr) => {
       acc[curr] = acc[curr] + 1 || 1;
+      if (acc[curr] === M) {
+        count++;
+      }
       return acc;
     }, {});
 
-    return Object.values(resultObj).filter((item) => item === M).length;
+    return count;
   };
 }
