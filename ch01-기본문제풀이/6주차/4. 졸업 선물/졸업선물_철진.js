@@ -41,7 +41,10 @@
           continue;
         }
         if (acc + priceList[j][1] === 28) {
-          max = max < save.length + 1 ? save.length + 1 : max;
+          acc += priceList[j][1];
+          save.push(priceList[j]);
+          max = max < save.length ? save.length : max;
+          continue;
         }
 
         acc += priceList[j][1];
