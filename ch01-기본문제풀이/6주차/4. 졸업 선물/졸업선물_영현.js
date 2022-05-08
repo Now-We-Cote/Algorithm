@@ -38,4 +38,4 @@ let arr = [
   [10, 3],
 ];
 
-solution(28, arr); // '137'
+solution(28, arr); // '4'
