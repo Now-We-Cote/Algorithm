@@ -4,8 +4,8 @@
 
 const solution = (arr) => {
   let answer = 0;
-  m = arr.length;
-  n = arr[0].length;
+  let m = arr.length;
+  let n = arr[0].length;
 
   for (let i = 1; i <= n; i++) {
     for (let j = 1; j <= n; j++) {
