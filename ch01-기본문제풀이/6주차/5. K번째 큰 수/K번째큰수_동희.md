@@ -2,7 +2,9 @@
 
 ```javascript
 function solution(n, k, arr) {
-  //여기서 왜 new Set(arr)이 아니라 new Set()일까?
+  //질문 : 여기서 왜 new Set(arr)이 아니라 new Set()일까?
+  //답변 : 뽑을 수 있는 카드의 패가 담긴 arr에서 중복을 제거하면 안되고, 이후 합의 중복을 제거해야한다.
+  //예시 : 13 13 13이 있을 경우 39라는 합이 나올 수 있는데 중복을 제거하면 합이 아예 사라진다. (thanks to 현재님)
   const set = new Set();
   let sum = 0;
   for (let i = 0; i < arr.length; i++) {
@@ -18,5 +20,4 @@ function solution(n, k, arr) {
 }
 
 let arr = [13, 15, 34, 23, 45, 65, 33, 11, 26, 42];
-console.log(solution(10, 3, arr));
 ```
