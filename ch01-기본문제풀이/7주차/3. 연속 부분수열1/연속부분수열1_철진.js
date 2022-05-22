@@ -16,16 +16,16 @@
 // 출력 예시 - 3
 
 {
-  const checkIsTrueCase = (array) => {
+  const checkIsTrueCase = (M, array) => {
     return array.slice().reduce((acc, curr, idx, array) => {
-      (acc + curr === 6 || acc + curr > 6) && array.splice(idx);
-      return acc + curr > 6 ? false : acc + curr === 6 ? true : acc + curr;
+      (acc + curr === M || acc + curr > M) && array.splice(idx);
+      return acc + curr > M ? false : acc + curr === M ? true : acc + curr;
     }, 0);
   };
 
   const solution = (N, M, array) => {
     return array
-      .map((item, idx) => checkIsTrueCase(array.slice(idx)))
+      .map((item, idx) => checkIsTrueCase(M, array.slice(idx)))
       .filter((item) => typeof item !== "number" && item).length;
   };
 }
