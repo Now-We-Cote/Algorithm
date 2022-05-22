@@ -35,4 +35,4 @@ const solution = (arr1, arr2) => {
 
 let arr1 = [1, 3, 5];
 let arr2 = [2, 3, 6, 7, 9];
-solution(arg1, arg2);
+solution(arr1, arr2);
