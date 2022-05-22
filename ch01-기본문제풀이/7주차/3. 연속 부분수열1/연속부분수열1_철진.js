@@ -24,8 +24,9 @@
   };
 
   const solution = (N, M, array) => {
-    return array
-      .map((item, idx) => checkIsTrueCase(M, array.slice(idx)))
-      .filter((item) => typeof item !== "number" && item).length;
+    return array.filter((item, idx) => {
+      const isTrueCase = checkIsTrueCase(M, array.slice(idx));
+      return typeof isTrueCase !== "number" && isTrueCase;
+    }).length;
   };
 }
