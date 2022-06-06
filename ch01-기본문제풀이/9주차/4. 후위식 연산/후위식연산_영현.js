@@ -20,8 +20,8 @@ const solution = (str) => {
     if (!isNaN(x)) {
       arr.push(x);
     } else {
-      const a = Number(arr.pop());
       const b = Number(arr.pop());
+      const a = Number(arr.pop());
       arr.push(calc(x, a, b));
     }
   }
