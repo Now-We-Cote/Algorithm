@@ -66,7 +66,7 @@
       }
     }
     // find max value
-    for ([key, val] of hash) {
+    for (let [key, val] of hash) {
       if (val > max) {
         max = val;
         answer = key;
