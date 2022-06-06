@@ -8,7 +8,7 @@
         stack.push(char);
       } else {
         // ) 닫히는거 발견 = () 만족하는 부분 제거
-        const lastIdx = stack.lastIndexOf("(");
+        const lastIdx = stack.lastIndexOf("("); // while문을 사용하는 경우 "("가 pop한 뒤에 끝남 -> pop이 먼저고 그 뒤에 유효성 검사하니까!!
         stack.splice(lastIdx);
       }
     }
