@@ -89,7 +89,7 @@
       //rt = 우측 포인터
       sH.set(s[rt], (sH.get(s[rt]) || 0) + 1); // 우측이 추가될때마다 1 더해줌
       if (sH.get(s[rt]) === 0) sH.delete(s[rt]); // sH을 세팅한다음에 0인 경우 = t에 있는게 겹치니 지워준다
-      if (sH.size === 0) answer++; // 0이 되면 모든 값이 t와 일치한다는 것으로 answer에 추가해준다
+      if (sH.size === 0) answer++; // 0이 되면       모든 값이 t와 일치한다는 것으로 answer에 추가해준다
       // size로 확인해주는 것이기 때문에 lt, rt 사이에 끼어있는 값들도 이미 확인한 것이 되어 문제 없음
       sH.set(s[lt], (sH.get(s[lt]) || 0) - 1); // 옮겨간 lt 값 확인 (버리는 녀석이기 때문에 빼준다)
       if (sH.get(s[lt]) === 0) sH.delete(s[lt]);
