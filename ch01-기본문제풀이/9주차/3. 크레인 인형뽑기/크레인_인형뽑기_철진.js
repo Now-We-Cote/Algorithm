@@ -54,5 +54,39 @@ const board = [
         }
       }
     }
+    return answer;
+  };
+}
+
+// 프로그래머스 채점 해보다가 신기했던 풀이 발견! 생각의 전환이 대단하다!
+
+{
+  // 2차원 배열의 행과 열을 전환하고, 0을 제거하는 함수!
+  const transpose = (matrix) =>
+    matrix.reduce(
+      (result, row) => row.map((_, i) => [...(result[i] || []), row[i]]),
+      []
+    );
+
+  // 0을 제거했기 때문에 더욱 빠르게 탐색할 수 있다.
+  const solution = (board, moves) => {
+    const stacks = transpose(board).map((row) =>
+      row.reverse().filter((el) => el !== 0)
+    );
+    const basket = [];
+    let result = 0;
+
+    for (const move of moves) {
+      const pop = stacks[move - 1].pop();
+      if (!pop) continue;
+      if (pop === basket[basket.length - 1]) {
+        basket.pop();
+        result += 2;
+        continue;
+      }
+      basket.push(pop);
+    }
+
+    return result;
   };
 }
