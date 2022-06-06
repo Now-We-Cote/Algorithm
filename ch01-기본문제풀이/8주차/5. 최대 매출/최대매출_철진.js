@@ -18,7 +18,9 @@
   const solution = (N, K, sales) => {
     return sales.slice(0, N - K).reduce(
       (acc, curr, idx) => {
-        const currentSum = curr + sales[idx + 1] + sales[idx + 2];
+        const currentSum = sales
+          .slice(idx, idx + K)
+          .reduce((acc, curr) => acc + curr);
 
         return {
           maxSum: currentSum > acc.maxSum ? currentSum : acc.maxSum,
