@@ -24,9 +24,10 @@
     const princes = [...Array(N)].map((_, idx) => idx + 1);
 
     while (princes.length > 1) {
-      const safePrince = princes.splice(0, K - 1);
-
-      princes.push(...safePrince); // 살아남은 왕자들 자리 뒤로 옮기기
+      for (let i = 1; i < K; i++) {
+        // 살아남은 왕자 뒤로 옮기기(예외 없이!)
+        princes.push(queue.shift(i));
+      }
 
       princes.shift(); // K 외친 왕자는 탈락.
     }
