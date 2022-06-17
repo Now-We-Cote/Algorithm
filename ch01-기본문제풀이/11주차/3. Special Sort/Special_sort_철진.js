@@ -10,3 +10,29 @@
 // 입력 예시 - 8, [1, 2, 3, -3, -2, 5, 6, -6]
 
 // 출력 예시 - [-3, -2, -6, 1, 2, 3, 5, 6]
+
+{
+  const solution = (N, numbers) => {
+    const negativeNumbers = [];
+    const positiveNumbers = [];
+
+    for (number of numbers) {
+      number > 0 ? positiveNumbers.push(number) : negativeNumbers.push(number);
+    }
+
+    return [...negativeNumbers, ...positiveNumbers];
+  };
+
+  // 버블 정렬로 풀어야 하나?
+
+  const bubbleSortSolution = (N, numbers) => {
+    for (let i = 0; i < numbers.length; i++) {
+      for (let j = 0; j < numbers.length - i - 1; j++) {
+        if (numbers[j] > 0 && numbers[j + 1] < 0) {
+          [numbers[j], numbers[j + 1]] = [numbers[j + 1], numbers[j]];
+        }
+      }
+    }
+    return numbers;
+  };
+}
