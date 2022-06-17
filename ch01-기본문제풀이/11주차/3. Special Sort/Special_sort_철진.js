@@ -22,4 +22,17 @@
 
     return [...negativeNumbers, ...positiveNumbers];
   };
+
+  // 버블 정렬로 풀어야 하나?
+
+  const bubbleSortSolution = (N, numbers) => {
+    for (let i = 0; i < numbers.length; i++) {
+      for (let j = 0; j < numbers.length - i - 1; j++) {
+        if (numbers[j] > 0 && numbers[j + 1] < 0) {
+          [numbers[j], numbers[j + 1]] = [numbers[j + 1], numbers[j]];
+        }
+      }
+    }
+    return numbers;
+  };
 }
