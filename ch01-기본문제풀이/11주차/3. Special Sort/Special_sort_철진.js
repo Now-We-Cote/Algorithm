@@ -10,3 +10,16 @@
 // 입력 예시 - 8, [1, 2, 3, -3, -2, 5, 6, -6]
 
 // 출력 예시 - [-3, -2, -6, 1, 2, 3, 5, 6]
+
+{
+  const solution = (N, numbers) => {
+    const negativeNumbers = [];
+    const positiveNumbers = [];
+
+    for (number of numbers) {
+      number > 0 ? positiveNumbers.push(number) : negativeNumbers.push(number);
+    }
+
+    return [...negativeNumbers, ...positiveNumbers];
+  };
+}
