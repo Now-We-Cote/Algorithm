@@ -3,6 +3,7 @@
 // 답안
 
 const solution = (arr) => {
+  let answer = arr;
   for (i = 0; i < arr.lenght; i++) {
     // i는 기준으로 삼는다
 
@@ -20,4 +21,4 @@ const solution = (arr) => {
 };
 
 const arr = [13, 5, 11, 7, 23, 15];
-solution(arr); // YES
+solution(arr);
