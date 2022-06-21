@@ -8,11 +8,6 @@ function solution(arr) {
       if (arr[j] > 0 && arr[j + 1] < 0) {
         [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
       }
-
-      //작은 수부터 정렬
-      if (arr[j] > arr[j + 1]) {
-        [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
-      }
     }
   }
   return arr;
