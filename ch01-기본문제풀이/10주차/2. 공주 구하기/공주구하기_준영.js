@@ -22,15 +22,16 @@
  */
 
 const solution = (N, K) => {
-    const princeArr = Array.from({length: N}, (v, i) => i + 1)
+  ``;
+  const princeArr = Array.from({ length: N }, (v, i) => i + 1);
 
-    while(princeArr.length !== 1) {
-        for (let i = 1; i < K; i ++) {
-            princeArr.push(princeArr.shift());
-        }
-        princeArr.shift();
+  while (princeArr.length !== 1) {
+    for (let i = 1; i < K; i++) {
+      princeArr.push(princeArr.shift());
     }
-    return princeArr[0];
-}
+    princeArr.shift();
+  }
+  return princeArr[0];
+};
 
-console.log(solution(8, 3))
+console.log(solution(8, 3));
