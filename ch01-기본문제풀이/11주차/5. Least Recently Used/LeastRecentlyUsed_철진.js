@@ -34,7 +34,7 @@
         memory.unshift(work);
       } else {
         const cacheIndex = memory.indexOf(work);
-        memory.splice(work, 1);
+        memory.splice(cacheIndex, 1);
         memory.unshift(work);
       }
     }
