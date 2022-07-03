@@ -44,7 +44,7 @@
 
     while (left <= right) {
       let mid = Math.floor((left + right) / 2);
-      if (getDvdCount(song, mid) <= M) {
+      if (getDvdCount(songs, mid) <= M) {
         result = mid;
         right = mid - 1;
       } else {
