@@ -19,6 +19,6 @@
   const solution = (N) => {
     let result = "";
 
-    return print(N, result);
+    return print(N, result).split("").reverse().join("");
   };
 }
