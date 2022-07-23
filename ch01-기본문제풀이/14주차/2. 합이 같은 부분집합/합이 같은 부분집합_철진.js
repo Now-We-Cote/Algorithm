@@ -10,6 +10,30 @@
 
 // 출력 - 첫 번째 줄에 “YES" 또는 ”NO"를 출력한다.
 
-// 입력 예시 - 6, 1 3 5 6 7 10
+// 입력 예시 - 6, [1, 3, 5, 6, 7, 10]
 
 // 출력 예시 - YES
+
+{
+  const solution = (N, numbers) => {
+    let result = "NO";
+    const total = numbers.reduce((prev, curr) => prev + curr);
+
+    const dfs = (level, sum) => {
+      if (result === "YES") {
+        return;
+      }
+
+      if (level === N) {
+        if (total - sum === sum) {
+          result = "YES";
+        }
+      } else {
+        dfs(level + 1, sum + numbers[level]);
+        dfs(level + 1, sum);
+      }
+    };
+    dfs(0, 0);
+    return result;
+  };
+}
