@@ -8,6 +8,27 @@
 
 // 출력 - 첫 번째 줄에 가장 무거운 무게를 출력한다.
 
-// 입력 예시 - 259, 5, 81, 58, 42 33 61
+// 입력 예시 - 259, 5, [81, 58, 42 33 61]
 
 // 출력 예시 - 242
+
+{
+  const solution = (C, N, dogs) => {
+    let result = 0;
+
+    const dfs = (level, sum) => {
+      if (sum > C) {
+        return;
+      }
+
+      if (level === N) {
+        result = Math.max(result, sum);
+      } else {
+        dfs(level + 1, sum + dogs[level]);
+        dfs(level + 1, sum);
+      }
+    };
+    dfs(0, 0);
+    return result;
+  };
+}
