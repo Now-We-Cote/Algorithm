@@ -11,5 +11,23 @@
 // 출력 예시 - 123, 12, 13, 1, 23, 2, 3
 
 {
-  const solution = () => {};
+  const solution = (N) => {
+    const result = [];
+    const visit = new Array(N).fill(0);
+    const dfs = (K) => {
+      if (K > N) {
+        const set = visit.filter((n) => n !== 0);
+        if (set.length > 0) {
+          result.push(set);
+        }
+      } else {
+        visit[K] = K;
+        dfs(K + 1);
+        visit[K] = 0;
+        dfs(K + 1);
+      }
+    };
+    dfs(1);
+    return result;
+  };
 }
