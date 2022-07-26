@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      const recurFunc2 = (n) => {
+        if (n > 7) {
+          return;
+        } else {
+          recurFunc2(2 * n);
+          recurFunc2(2 * n + 1);
+          console.log(n);
+        }
+      };
+
+      function solution(n) {
+        recurFunc2(n);
+      }
+
+      solution(1);
+    </script>
+  </body>
+</html>
