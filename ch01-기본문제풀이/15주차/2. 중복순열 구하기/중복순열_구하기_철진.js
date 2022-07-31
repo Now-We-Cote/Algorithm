@@ -1,0 +1,35 @@
+// 중복순열 구하기
+
+// 문제 - 1부터 N까지 번호가 적힌 구슬이 있습니다.
+// 이 중 중복을 허락하여 M번을 뽑아 일렬로 나열 하는 방법을 모두 출력합니다.
+
+// 입력 - 첫 번째 줄에 자연수 N(3<=N<=10)과 M(2<=M<=N) 이 주어집니다.
+
+// 출력 - 첫 번째 줄에 결과를 출력합니다. 맨 마지막 총 경우의 수를 출력합니다.
+// 출력순서는 사전순으로 오름차순으로 출력합니다.
+
+// 입력 예제 - 3, 2
+
+// 출력 예제 - 1 1, 1 2, 1 3, 2 1, 2 2, 2 3, 3 1, 3 2, 3 3, 9
+
+{
+  const solution = (N, M) => {
+    let count = 0;
+    const result = [];
+    const visit = new Array(M).fill(0);
+
+    const DFS = (level) => {
+      if (level === M) {
+        result.push(visit.slice());
+        count++;
+      } else {
+        for (let i = 1; i < N + 1; i++) {
+          visit[level] = i;
+          DFS(level + 1);
+        }
+      }
+    };
+    DFS(0);
+    return [result, count];
+  };
+}
