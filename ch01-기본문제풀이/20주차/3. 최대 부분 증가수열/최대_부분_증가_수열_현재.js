@@ -5,7 +5,7 @@
   dy[0] = 1 // 초기화
   for(let i = 1; i < arr.length; i ++) {
       let max = 0; // 초기화
-      for(let j = i; j >=0; j--) {
+      for(let j = i - 1; j >=0; j--) { // j를 사용해 i 앞부분을 탐색하기에 i-1부터 시작해야
         if(arr[j] < arr[i] && dy[j] > max) { // 앞의 항 이면서 dynamic 배열에서 최대값인지 확인
           max = dy[j]
         }
