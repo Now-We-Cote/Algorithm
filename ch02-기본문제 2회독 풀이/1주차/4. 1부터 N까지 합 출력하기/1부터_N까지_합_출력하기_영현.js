@@ -2,7 +2,11 @@
 
 // 답안
 const solution = (num) => {
-  return Math.floor(num / 12);
+  let answer = 0;
+  for (let i = 1; i <= num; i++) {
+    answer += i;
+  }
+  return answer;
 };
 
-console.log(solution(178));
+console.log(solution(6));
