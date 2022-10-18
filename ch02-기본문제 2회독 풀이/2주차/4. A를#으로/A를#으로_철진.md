@@ -24,6 +24,6 @@ B#N#N#
 
 ```javascript
 const solution = (str) => {
-  str.replaceAll('A', '#');
+  return str.replaceAll('A', '#');
 };
 ```
