@@ -6,7 +6,7 @@ const solution = (str) => {
   const isUpperStr = (t) => {
     if (t === t.toUpperCase()) return true;
   };
-  return str.split("").filter((t) => isUpperStr(t));
+  return str.split("").filter((t) => isUpperStr(t)).length;
 };
 
 const str = "KoreaTimeGood";
