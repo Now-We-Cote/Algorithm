@@ -3,12 +3,22 @@
 // 답안
 
 const solution = (str) => {
-  const isOdd = str.length % 2;
-  const midNum = str.length / 2;
-
-  return isOdd ? str.substr(midNum, 1) : str.substr(midNum - 1, 2);
+  let answer = [];
+  for (let i = 0; i < str.length; i++) {
+    if (answer.indexOf(str[i]) === -1) {
+      answer += str[i];
+    }
+  }
+  return answer;
 };
 
-const str = "study";
+const solution2 = (str) => {
+  const set = new Set(str);
+  const newArr = [...set].join("");
 
-console.log(solution(str));
+  return newArr;
+};
+
+const str = "ksekkset";
+
+console.log(solution2(str));
