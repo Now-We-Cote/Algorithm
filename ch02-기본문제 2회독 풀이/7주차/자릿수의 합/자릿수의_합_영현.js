@@ -17,6 +17,6 @@ const solution = (arr) => {
   return answer;
 };
 
-let arr = [128, 460, 603, 40, 521, 137, 123];
+const arr = [128, 460, 603, 40, 521, 137, 123];
 
 solution(arr); // '137'
