@@ -1,0 +1,30 @@
+# K번째 큰 수
+
+```javascript
+const solution = (arr) => {
+  let sumArr = []; //합의 배열
+  let answer = 0; //정답
+  let maxSum = 0; //가장 큰 합
+
+  for (let i = 0; i < arr.length; i++) {
+    sumArr.push(
+      arr[i]
+        .toString()
+        .split("")
+        .reduce((prev, cur) => Number(prev) + Number(cur))
+    );
+  }
+  
+  sumArr.map((sum,index) => {
+    if(maxSum < sum) {
+      maxSum = sum;
+      answer=arr[index];
+    } else if(maxSum = sum){
+      answer = answer>arr[index] ? answer: arr[index]
+    }
+  })
+return answer;
+};
+
+solution([128, 460, 603, 40, 521, 137, 123]); //137
+```
