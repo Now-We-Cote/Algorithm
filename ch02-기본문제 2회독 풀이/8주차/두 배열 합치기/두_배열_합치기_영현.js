@@ -46,6 +46,8 @@ const solution = (arr1, arr2) => {
   while (p2 < m) {
     answer.push(arr2[p2++]);
   }
+
+  return answer;
 };
 
 let arr1 = [1, 3, 5];
