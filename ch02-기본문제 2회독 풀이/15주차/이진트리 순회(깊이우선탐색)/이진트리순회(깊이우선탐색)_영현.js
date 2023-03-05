@@ -1,28 +1,21 @@
-// 부분집합 구하기
+// 이진트리순회
 
 // 풀이
 const solution = (v) => {
-  let answer = [];
-  let ch = Array.from({ length: v }, () => 0);
+  let answer;
 
-  const DFS = (N) => {
-    if (N > v) {
-      const newArr = ch.reduce((acc, curr, index) => {
-        if (curr) {
-          acc.push(index);
-        }
-        return acc;
-      }, []);
-      if (newArr.length > 0) answer.push(newArr);
-    } else {
-      ch[N] = 1;
-      DFS(N + 1);
-      ch[N] = 0;
-      DFS(N + 1);
+  const DFS = (v) => {
+    if (v > 7) return;
+    else {
+      console.log("전위순회 >>>", v); // 일단 첫번째 부모 출력 -> 전위순회
+      DFS(v * 2); // 왼쪽 자식으로 이동
+      console.log("중위순회 >>>", v); // -> 중위순회
+      DFS(v * 2 + 1); // 오른쪽 자식으로 이동
+      console.log("후위순회 >>>", v); // -> 후위순회
     }
   };
-  DFS(1);
+  DFS(v);
   return answer;
 };
 
-solution(3);
+solution(1);
