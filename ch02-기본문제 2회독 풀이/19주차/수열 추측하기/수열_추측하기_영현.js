@@ -8,7 +8,6 @@ const solution = (n, f) => {
   let ch = Array.from({ length: n + 1 }, () => 0); //체크 배열
   let p = Array.from({ length: n }, () => 0); //순열 저장
   let b = Array.from({ length: n }, () => 0); //1331 처럼 조합값을 저장
-  console.log("ch", ch);
 
   // 조합값을 구하는 함수
   const combi = (n, r) => {
